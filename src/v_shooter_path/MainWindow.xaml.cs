@@ -36,11 +36,12 @@ namespace v_shooter_path
         {
             InitializeComponent();
 
-            
-            
+            datas = new Datas();
+
+            datas = Datas.LoadFromFile("datas.json");
 
 
-            
+            Dg_Attributes.ItemsSource = datas.ListTypeEntities[0].ListAttributes;
 
             mouse_rectangle = new Rectangle();
             mouse_rectangle.Width = 50;
@@ -64,12 +65,6 @@ namespace v_shooter_path
 
         }
 
-        private void create_empty_lvl()
-        {
-            datas = new Datas();
-
-            
-        }
 
         private void canvas_board_MouseMove(object sender, MouseEventArgs e)
         {
@@ -86,9 +81,6 @@ namespace v_shooter_path
             Canvas.SetTop(mouse_rectangle, coord_y);
 
         }
-
-
-
         private void btn_update_grid_Click(object sender, RoutedEventArgs e)
         {
             nb_case_along_x = int.Parse(tb_world_grid_x.Text);
@@ -99,7 +91,6 @@ namespace v_shooter_path
 
             canvas_board.Height = nb_case_along_y * mouse_rectangle.Height;
         }
-
         private void canvas_board_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Point mouse_position = e.GetPosition(canvas_board);
@@ -109,14 +100,14 @@ namespace v_shooter_path
             int case_en_y = (int)(mouse_position.Y / mouse_rectangle.Height);
 
 
-            datas.Entities.Add(new Entity(case_en_x, case_en_y, Brushes.Red));
+            //datas.Entities.Add(new Entity(case_en_x, case_en_y, Brushes.Red));
 
             UpdateCanvas();
 
         }
-
         private void UpdateCanvas()
         {
+            /*
             foreach (Entity entity in datas.Entities)
             { 
                 Rectangle tmp_rect = new Rectangle();
@@ -130,26 +121,20 @@ namespace v_shooter_path
                 Canvas.SetTop(tmp_rect, entity.CaseY * tmp_rect.Height);
                 canvas_board.Children.Add(tmp_rect);
             }
+            */
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            Dg_Attributes.ItemsSource = null;
+
             char letter = ((TextBlock)((StackPanel)((ComboBoxItem)Cb_entities.SelectedItem).Content).Children[1]).Text.ToCharArray()[0];
 
-            foreach(Entity e_t in datas.Entities)
+            foreach(TypeEntity typeEntity in datas.ListTypeEntities)
             {
-                if (e_t.Letter == letter)
+                if (typeEntity.Letter == letter)
                 {
-                    List<Attribute> tmp_list_attributes;
-                    if (e_t.Attributes.Count == 0)
-                    {
-                        tmp_list_attributes = new List<Attribute>();
-                    }
-                    else
-                    {
-                        tmp_list_attributes = e_t.Attributes;
-                    }
-                    Dg_Attributes.ItemsSource = tmp_list_attributes;
+                    Dg_Attributes.ItemsSource = typeEntity.ListAttributes;
                 }
             }
         }

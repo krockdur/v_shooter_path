@@ -1,0 +1,147 @@
+{
+    "ListTypeEntities": [
+        {
+            "Letter": "A",
+            "Color": "#f2f0e5",
+            "ListAttributes": [
+                {
+                    "Name": "vie",
+                    "Value": "3"
+                },
+                {
+                    "Name": "tire",
+                    "Value": "oui"
+                },
+                {
+                    "Name": "temp",
+                    "Value": "12"
+                }
+            ]
+        },
+        {
+            "Letter": "B",
+            "Color": "#b8b5b9",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "C",
+            "Color": "#868188",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "D",
+            "Color": "#646365",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "E",
+            "Color": "#45444f",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "F",
+            "Color": "#3a3858",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "G",
+            "Color": "#212123",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "H",
+            "Color": "#352b42",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "I",
+            "Color": "#43436a",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "J",
+            "Color": "#4b80ca",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "K",
+            "Color": "#68c2d3",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "L",
+            "Color": "#a2dcc7",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "M",
+            "Color": "#ede19e",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "N",
+            "Color": "#d3a068",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "O",
+            "Color": "#b45252",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "P",
+            "Color": "#6a536e",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "Q",
+            "Color": "#4b4158",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "R",
+            "Color": "#80493a",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "S",
+            "Color": "#a77b5b",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "T",
+            "Color": "#e5ceb4",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "U",
+            "Color": "#c2d368",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "V",
+            "Color": "#8ab060",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "W",
+            "Color": "#567b79",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "X",
+            "Color": "#4e584a",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "Y",
+            "Color": "#7b7243",
+            "ListAttributes": []
+        },
+        {
+            "Letter": "Z",
+            "Color": "#b2b47e",
+            "ListAttributes": []
+        }
+    ]
+}

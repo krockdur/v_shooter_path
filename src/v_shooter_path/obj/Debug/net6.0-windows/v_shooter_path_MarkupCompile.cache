@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\dev\wpf\v_shooter_path\v_shooter_path\obj\Debug\net6.0-windows\
+D:\A1_DEV\00_PERSO\v_shooter_path\src\v_shooter_path\obj\Debug\net6.0-windows\
 v_shooter_path
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\dev\wpf\v_shooter_path\v_shooter_path\App.xaml
+D:\A1_DEV\00_PERSO\v_shooter_path\src\v_shooter_path\App.xaml
 11407045341
 
-61971886697
-1941709816142
+8995395812
+195-662465263
 MainWindow.xaml;
 
 False

@@ -24,6 +24,191 @@
             <TextBox Name="tb_world_grid_x" />
             <TextBlock>World Grid Y</TextBlock>
             <TextBox Name="tb_world_grid_y" />
+            <ComboBox Name="Cb_entities_selection" IsEditable="False" SelectionChanged="Cb_entities_selection_SelectionChanged">
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#f2f0e5 " Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">A</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#b8b5b9" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">B</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#868188" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">C</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#646365" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">D</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#45444f" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">E</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#3a3858" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">F</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#212123" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">G</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#352b42" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">H</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#43436a" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">I</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#4b80ca" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">J</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#68c2d3" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">K</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#a2dcc7" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">L</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#ede19e" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">M</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#d3a068" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">N</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#b45252" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">O</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#6a536e" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">P</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#4b4158" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">Q</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#80493a" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">R</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#a77b5b" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">S</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#e5ceb4" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">T</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#c2d368" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">U</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#8ab060" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">V</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#567b79" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">W</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#4e584a" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">X</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#7b7243" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">Y</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#b2b47e" Width="25" Height="25" />
+                        <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">Z</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+
+            </ComboBox>
             <Button Name="btn_update_grid" Click="btn_update_grid_Click">Update</Button>
         </StackPanel>
 
@@ -35,9 +220,13 @@
                         <TextBlock>Level Editor</TextBlock>
                     </StackPanel>
                 </TabItem.Header>
-                <ScrollViewer Width="900" Height="600"  VerticalScrollBarVisibility="Auto">
-                    <Canvas Name="canvas_board" Width="900" Height="600" Background="Gray" MouseMove="canvas_board_MouseMove" MouseDown="canvas_board_MouseDown" Cursor="None" />
-                </ScrollViewer>
+
+                    
+                    <ScrollViewer Width="900" Height="600"  VerticalScrollBarVisibility="Auto">
+                        <Canvas Name="canvas_board" Width="900" Height="600" Background="Gray" MouseMove="canvas_board_MouseMove" MouseDown="canvas_board_MouseDown" Cursor="None" />
+                    </ScrollViewer>
+
+
             </TabItem>
             <TabItem>
                 <TabItem.Header>
@@ -62,11 +251,11 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         
-                        <TextBlock Grid.Column="0">OBJECT LETTER :</TextBlock>
+                        <TextBlock Grid.Column="0" VerticalAlignment="Center">OBJECT LETTER :</TextBlock>
 
-                        <ComboBox Name="Cb_entities" IsEditable="False" SelectionChanged="ComboBox_SelectionChanged"  Grid.Column="1">
+                        <ComboBox Name="Cb_entities_config" IsEditable="False" SelectionChanged="Cb_entities_config_SelectionChanged"  Grid.Column="1">
                             
-                            <ComboBoxItem Name="cb_i_a">
+                            <ComboBoxItem>
                                 <StackPanel Orientation="Horizontal">
                                     <Rectangle Fill="#f2f0e5 " Width="25" Height="25" />
                                     <TextBlock Width="50" TextAlignment="Center" VerticalAlignment="Center">A</TextBlock>

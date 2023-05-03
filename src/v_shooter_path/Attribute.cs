@@ -6,15 +6,20 @@ using System.Threading.Tasks;
 
 namespace v_shooter_path
 {
-    internal class Attribute
+    class Attribute
     {
+        public Attribute()
+        {
+            Name = string.Empty;
+            Value = string.Empty;
+        }
         public Attribute(string name, string value)
         {
             Name = name;
             Value = value;
         }
-        public string Name { get; set; } = String.Empty;
-        public string Value { get; set; } = String.Empty;
+        public string Name { get; set; }
+        public string Value { get; set; }
 
     }
 }

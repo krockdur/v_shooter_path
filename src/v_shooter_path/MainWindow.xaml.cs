@@ -41,7 +41,7 @@ namespace v_shooter_path
             datas = Datas.LoadFromFile("datas.json");
 
 
-            Dg_Attributes.ItemsSource = datas.ListTypeEntities[0].ListAttributes;
+
 
             mouse_rectangle = new Rectangle();
             mouse_rectangle.Width = 50;
@@ -124,11 +124,11 @@ namespace v_shooter_path
             */
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Cb_entities_config_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Dg_Attributes.ItemsSource = null;
 
-            char letter = ((TextBlock)((StackPanel)((ComboBoxItem)Cb_entities.SelectedItem).Content).Children[1]).Text.ToCharArray()[0];
+            char letter = ((TextBlock)((StackPanel)((ComboBoxItem)Cb_entities_config.SelectedItem).Content).Children[1]).Text.ToCharArray()[0];
 
             foreach(TypeEntity typeEntity in datas.ListTypeEntities)
             {
@@ -137,6 +137,11 @@ namespace v_shooter_path
                     Dg_Attributes.ItemsSource = typeEntity.ListAttributes;
                 }
             }
+        }
+
+        private void Cb_entities_selection_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

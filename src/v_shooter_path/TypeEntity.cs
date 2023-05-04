@@ -20,6 +20,5 @@ namespace v_shooter_path
         public Brush Color { get; set; }
         public List<Attribute> ListAttributes { get; set; }
 
-
     }
 }

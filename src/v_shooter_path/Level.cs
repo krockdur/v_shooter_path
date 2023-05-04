@@ -9,5 +9,9 @@ namespace v_shooter_path
     internal class Level
     {
         public List<Entity>? ListEntities { get; set; }
+
+        public int NbEntitiesInX { get; set; }
+        public int NbEntitiesInY { get; set; }
+        public string Filename { get; set; }
     }
 }

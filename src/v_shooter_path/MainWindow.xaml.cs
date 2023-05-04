@@ -26,11 +26,15 @@ namespace v_shooter_path
         private const int canvas_width = 900;
         private const int canvas_heigth = 600;
 
+        private char letter_selected;
+
         private int nb_case_along_x;
 
         Point rectangle_positon;
 
         Datas datas;
+
+        Level lvl;
 
         public MainWindow()
         {
@@ -40,7 +44,7 @@ namespace v_shooter_path
 
             datas = Datas.LoadFromFile("datas.json");
 
-
+            
 
 
             mouse_rectangle = new Rectangle();
@@ -62,6 +66,14 @@ namespace v_shooter_path
 
             //binding datagrid
             Dg_Attributes.DataContext = null;
+
+
+            //
+            Cb_entities_selection.SelectedIndex = 0;
+
+            // create empty lvl
+            lvl = new Level();
+            lvl.ListEntities = new List<Entity>();
 
         }
 
@@ -102,26 +114,33 @@ namespace v_shooter_path
 
             //datas.Entities.Add(new Entity(case_en_x, case_en_y, Brushes.Red));
 
+            Entity tmp_entity = new Entity { CaseX = case_en_x, CaseY = case_en_y, Letter = letter_selected };
+
+            lvl.ListEntities.Add(tmp_entity);
+
             UpdateCanvas();
 
         }
         private void UpdateCanvas()
         {
-            /*
-            foreach (Entity entity in datas.Entities)
+            
+            foreach (Entity entity in lvl.ListEntities)
             { 
+
                 Rectangle tmp_rect = new Rectangle();
 
                 tmp_rect.Width = mouse_rectangle.Width;
                 tmp_rect.Height = mouse_rectangle.Height;
-                tmp_rect.Fill = entity.RectColor;
+                tmp_rect.Fill = datas.GetBrushFromLetter(entity.Letter);
 
 
                 Canvas.SetLeft(tmp_rect, entity.CaseX * tmp_rect.Width);
                 Canvas.SetTop(tmp_rect, entity.CaseY * tmp_rect.Height);
                 canvas_board.Children.Add(tmp_rect);
             }
-            */
+            
+
+
         }
 
         private void Cb_entities_config_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -141,6 +160,10 @@ namespace v_shooter_path
 
         private void Cb_entities_selection_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            letter_selected = ((TextBlock)((StackPanel)((ComboBoxItem)Cb_entities_selection.SelectedItem).Content).Children[1]).Text.ToCharArray()[0];
+            Rectangle rect = ((Rectangle)((StackPanel)((ComboBoxItem)Cb_entities_selection.SelectedItem).Content).Children[0]);
+            SolidColorBrush rectBrush = (SolidColorBrush)rect.Fill;
+            mouse_rectangle.Fill = rectBrush;
 
         }
     }

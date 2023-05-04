@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 using Newtonsoft.Json;
 
 namespace v_shooter_path
@@ -15,6 +16,20 @@ namespace v_shooter_path
         public Datas()
         {
             ListTypeEntities = new List<TypeEntity>();
+        }
+
+        public Brush GetBrushFromLetter(char letter)
+        {
+            Brush brush_to_ret = Brushes.White;
+            foreach (TypeEntity tp in ListTypeEntities)
+            {
+                if(tp.Letter == letter)
+                {
+                    brush_to_ret = tp.Color;
+                    break;
+                }
+            }
+            return brush_to_ret;
         }
 
         /**

@@ -18,6 +18,8 @@
             <ColumnDefinition/>
             <ColumnDefinition  Width="900px"/>
         </Grid.ColumnDefinitions>
+        
+        
 
         <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0">
             <TextBlock>World Grid X</TextBlock>

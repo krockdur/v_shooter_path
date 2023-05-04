@@ -166,5 +166,25 @@ namespace v_shooter_path
             mouse_rectangle.Fill = rectBrush;
 
         }
+
+        private void Btn_NewSet_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_OpenSet_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_NewLvl_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_OpenLvl_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -40,12 +41,10 @@ namespace v_shooter_path
         {
             InitializeComponent();
 
-            datas = new Datas();
-
-            datas = Datas.LoadFromFile("datas.json");
-
             
-
+            // create empty data configuration
+            datas = new Datas();
+            
 
             mouse_rectangle = new Rectangle();
             mouse_rectangle.Width = 50;
@@ -63,9 +62,6 @@ namespace v_shooter_path
             tb_world_grid_x.Text = nb_case_along_x.ToString();
 
 
-
-            //binding datagrid
-            Dg_Attributes.DataContext = null;
 
 
             //
@@ -169,12 +165,34 @@ namespace v_shooter_path
 
         private void Btn_NewSet_Click(object sender, RoutedEventArgs e)
         {
+            datas.ListTypeEntities = null;
+            datas = new Datas();
 
+            Cb_entities_config.SelectedIndex = 0;
         }
 
         private void Btn_OpenSet_Click(object sender, RoutedEventArgs e)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "JSON file |*.json";
 
+            if (openFileDialog.ShowDialog() == true)
+            {
+                datas = Datas.LoadFromFile(openFileDialog.FileName);
+                Cb_entities_config.SelectedIndex = 0;
+            }           
+                
+        }
+        private void Btn_SaveSet_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "JSON file |*.json";
+
+
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                Datas.SaveToFile(datas, saveFileDialog.FileName);
+            }
         }
 
         private void Btn_NewLvl_Click(object sender, RoutedEventArgs e)
@@ -183,6 +201,13 @@ namespace v_shooter_path
         }
 
         private void Btn_OpenLvl_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+
+        private void Btn_SaveLvl_Click(object sender, RoutedEventArgs e)
         {
 
         }

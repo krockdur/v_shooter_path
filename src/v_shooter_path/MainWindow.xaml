@@ -23,11 +23,11 @@
         <Grid Grid.Row="0" Grid.Column="1" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="60px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -37,8 +37,12 @@
 
             <Button Name="Btn_NewSet" Click="Btn_NewSet_Click" Grid.Row="1" Grid.Column="1" Margin="5" >New set</Button>
             <Button Name="Btn_OpenSet" Click="Btn_OpenSet_Click" Grid.Row="1" Grid.Column="2" Margin="5" >Open set</Button>
-            <Button Name="Btn_NewLvl" Click="Btn_NewLvl_Click" Grid.Row="1" Grid.Column="3" Margin="5" >New level</Button>
-            <Button Name="Btn_OpenLvl" Click="Btn_OpenLvl_Click" Grid.Row="1" Grid.Column="4" Margin="5" >Open level</Button>
+            <Button Name="Btn_SaveSet" Click="Btn_SaveSet_Click" Grid.Row="1" Grid.Column="3" Margin="5">Export set</Button>
+            
+            
+            <Button Name="Btn_NewLvl" Click="Btn_NewLvl_Click" Grid.Row="2" Grid.Column="1" Margin="5" >New level</Button>
+            <Button Name="Btn_OpenLvl" Click="Btn_OpenLvl_Click" Grid.Row="2" Grid.Column="2" Margin="5" >Open level</Button>
+            <Button Name="Btn_SaveLvl" Click="Btn_SaveLvl_Click" Grid.Row="2" Grid.Column="3" Margin="5" >Export level</Button>
             
         </Grid>
         

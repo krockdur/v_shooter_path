@@ -42,3 +42,5 @@ D:\A1_DEV\00_PERSO\v_shooter_path\src\v_shooter_path\obj\Debug\net6.0-windows\v_
 D:\A1_DEV\00_PERSO\v_shooter_path\src\v_shooter_path\obj\Debug\net6.0-windows\ref\v_shooter_path.dll
 D:\A1_DEV\00_PERSO\v_shooter_path\src\v_shooter_path\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 D:\A1_DEV\00_PERSO\v_shooter_path\src\v_shooter_path\obj\Debug\net6.0-windows\v_shooter_path.csproj.CopyComplete
+D:\A1_DEV\00_PERSO\v_shooter_path\src\v_shooter_path\obj\Debug\net6.0-windows\NewLvlWindow.g.cs
+D:\A1_DEV\00_PERSO\v_shooter_path\src\v_shooter_path\obj\Debug\net6.0-windows\NewLvlWindow.baml

@@ -197,7 +197,19 @@ namespace v_shooter_path
 
         private void Btn_NewLvl_Click(object sender, RoutedEventArgs e)
         {
+            NewLvlWindow newLvlWindow = new NewLvlWindow();
+            newLvlWindow.Owner = this;
+            newLvlWindow.Closed += NewLvlWindow_Closed;
+            newLvlWindow.ShowDialog();
+        }
 
+        private void NewLvlWindow_Closed(object? sender, EventArgs e)
+        {
+            NewLvlWindow newLvlWindow = (NewLvlWindow)sender;
+            if (newLvlWindow.OkToCreate)
+            {
+                MessageBox.Show(newLvlWindow.WorldX.ToString() + "    " + newLvlWindow.WorldY.ToString());
+            }
         }
 
         private void Btn_OpenLvl_Click(object sender, RoutedEventArgs e)

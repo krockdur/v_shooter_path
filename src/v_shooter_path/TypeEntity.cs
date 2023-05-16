@@ -7,7 +7,7 @@ using System.Windows.Media;
 
 namespace v_shooter_path
 {
-    class TypeEntity
+    public class TypeEntity
     {
         public TypeEntity(char letter, Brush color)
         {

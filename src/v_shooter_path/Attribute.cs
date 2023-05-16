@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace v_shooter_path
 {
-    class Attribute
+    public class Attribute
     {
         public Attribute()
         {

@@ -12,5 +12,7 @@ namespace v_shooter_path
         public char Letter { get; set; }
         public int CaseX { get; set; }
         public int CaseY { get; set; }
+
+        public List<Attribute> ListAttributes { get; set; } = new List<Attribute>();
     }
 }

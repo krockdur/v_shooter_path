@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 namespace v_shooter_path
 {
-    internal class Datas
+    public class Datas
     {
         public List<TypeEntity> ListTypeEntities { get; set; }
 

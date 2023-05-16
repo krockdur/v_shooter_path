@@ -79,6 +79,8 @@ namespace v_shooter_path
             canvas_board.Children.Add(mouse_rectangle);
 
             lvl = new Level();
+            lvl.NbEntitiesInX = nb_entities_x;
+            lvl.NbEntitiesInY = nb_entities_y;
             lvl.ListEntities = new List<Entity>();
 
             mouse_rectangle.Width = canvas_width / nb_entities_x;
@@ -123,12 +125,25 @@ namespace v_shooter_path
             int case_en_x = (int)(mouse_position.X / mouse_rectangle.Width);
             int case_en_y = (int)(mouse_position.Y / mouse_rectangle.Height);
 
+            bool case_already_affect = false;
+            foreach (Entity ent in lvl.ListEntities)
+            {
+                if (ent.CaseX == case_en_x && ent.CaseY == case_en_y)
+                {
+                    // position already added - just replace letter
+                    ent.Letter = letter_selected;
+                    case_already_affect = true;
+                    break;
+                }
+            }
 
-            //datas.Entities.Add(new Entity(case_en_x, case_en_y, Brushes.Red));
+            // if position doesn't exist
+            if (!case_already_affect)
+            {
+                Entity tmp_entity = new Entity { CaseX = case_en_x, CaseY = case_en_y, Letter = letter_selected };
+                lvl.ListEntities.Add(tmp_entity);
+            }
 
-            Entity tmp_entity = new Entity { CaseX = case_en_x, CaseY = case_en_y, Letter = letter_selected };
-
-            lvl.ListEntities.Add(tmp_entity);
 
             UpdateCanvas();
 
@@ -237,7 +252,7 @@ namespace v_shooter_path
 
         private void Btn_SaveLvl_Click(object sender, RoutedEventArgs e)
         {
-            ExportLvlWindow exportLvlWindow = new ExportLvlWindow(lvl);
+            ExportLvlWindow exportLvlWindow = new ExportLvlWindow(lvl, datas);
             exportLvlWindow.Owner = this;
             exportLvlWindow.ShowDialog();
         }

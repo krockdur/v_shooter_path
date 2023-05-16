@@ -23,12 +23,13 @@ namespace v_shooter_path
     public partial class ExportLvlWindow : Window
     {
         private Level _level;
+        private Datas _datas;
         private string _format = "json";
         private string _lvl_name = "default";
-        public ExportLvlWindow(Level level)
+        public ExportLvlWindow(Level level, Datas datas, int lvl_width, int lvl_height)
         {
             _level = level;
-
+            _datas = datas;
             InitializeComponent();
 
 
@@ -51,9 +52,26 @@ namespace v_shooter_path
 
         }
 
+        private void populate_lvl_attribute()
+        {
+            if (_level.ListEntities != null)
+            {   foreach(Entity ent in _level.ListEntities)
+                {
+                    foreach(TypeEntity te in _datas.ListTypeEntities)
+                    {
+                        if (ent.Letter == te.Letter)
+                        {
+                            ent.ListAttributes = te.ListAttributes;
+                        }
+                    }
+                }
+            }
+        }
         private void Btn_Export_Click(object sender, RoutedEventArgs e)
         {
+            populate_lvl_attribute();
             SaveFileDialog saveFileDialog = new SaveFileDialog();
+
                 
             if (_format == "json")
             {
@@ -75,6 +93,15 @@ namespace v_shooter_path
             if (_format == "ascii")
             {
                 saveFileDialog.Filter = "TXT file |*.txt";
+                saveFileDialog.FileName = _lvl_name + ".txt";
+
+                if (saveFileDialog.ShowDialog() == true)
+                {
+                    using (StreamWriter sw = new StreamWriter(saveFileDialog.FileName))
+                    {
+                        _level.ListEntities.Sort()
+                    }
+                }
             }
         }
 

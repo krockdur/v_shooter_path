@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace v_shooter_path
 {
-    internal class Level
+    public class Level
     {
         public List<Entity>? ListEntities { get; set; }
 

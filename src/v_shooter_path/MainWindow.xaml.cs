@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
@@ -59,7 +60,6 @@ namespace v_shooter_path
             nb_case_along_x = 10;
             mouse_rectangle.Width = canvas_width / nb_case_along_x;
             mouse_rectangle.Height = mouse_rectangle.Width;
-            tb_world_grid_x.Text = nb_case_along_x.ToString();
 
 
 
@@ -68,14 +68,35 @@ namespace v_shooter_path
             Cb_entities_selection.SelectedIndex = 0;
 
             // create empty lvl
+            initialize_new_level(10, 50);
+            
+
+        }
+
+        private void initialize_new_level(int nb_entities_x, int nb_entities_y)
+        {
+            canvas_board.Children.Clear();
+            canvas_board.Children.Add(mouse_rectangle);
+
             lvl = new Level();
             lvl.ListEntities = new List<Entity>();
+
+            mouse_rectangle.Width = canvas_width / nb_entities_x;
+            mouse_rectangle.Height = mouse_rectangle.Width;
+
+            canvas_board.Height = nb_entities_y * mouse_rectangle.Height;
+
+            UpdateCanvas();
+
+            TbInfoLvlWidth.Text = nb_entities_x.ToString();
+            TbInfoLvlHeight.Text = nb_entities_y.ToString();
 
         }
 
 
         private void canvas_board_MouseMove(object sender, MouseEventArgs e)
         {
+
             Point mouse_position = e.GetPosition(canvas_board);
 
 
@@ -88,17 +109,12 @@ namespace v_shooter_path
             Canvas.SetLeft(mouse_rectangle, coord_x);
             Canvas.SetTop(mouse_rectangle, coord_y);
 
-        }
-        private void btn_update_grid_Click(object sender, RoutedEventArgs e)
-        {
-            nb_case_along_x = int.Parse(tb_world_grid_x.Text);
-            int nb_case_along_y = int.Parse(tb_world_grid_y.Text);
+            TbInfoMousePositionX.Text = coord_x.ToString();
+            TbInfoMousePositionY.Text = coord_y.ToString();
 
-            mouse_rectangle.Width = canvas_width / nb_case_along_x;
-            mouse_rectangle.Height = mouse_rectangle.Width;
-
-            canvas_board.Height = nb_case_along_y * mouse_rectangle.Height;
         }
+
+
         private void canvas_board_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Point mouse_position = e.GetPosition(canvas_board);
@@ -208,7 +224,7 @@ namespace v_shooter_path
             NewLvlWindow newLvlWindow = (NewLvlWindow)sender;
             if (newLvlWindow.OkToCreate)
             {
-                MessageBox.Show(newLvlWindow.WorldX.ToString() + "    " + newLvlWindow.WorldY.ToString());
+                initialize_new_level(newLvlWindow.WorldX, newLvlWindow.WorldY);
             }
         }
 
@@ -221,7 +237,9 @@ namespace v_shooter_path
 
         private void Btn_SaveLvl_Click(object sender, RoutedEventArgs e)
         {
-
+            ExportLvlWindow exportLvlWindow = new ExportLvlWindow(lvl);
+            exportLvlWindow.Owner = this;
+            exportLvlWindow.ShowDialog();
         }
     }
 }

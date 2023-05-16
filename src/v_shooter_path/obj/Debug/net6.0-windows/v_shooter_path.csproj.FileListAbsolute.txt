@@ -44,3 +44,5 @@ D:\A1_DEV\00_PERSO\v_shooter_path\src\v_shooter_path\bin\Debug\net6.0-windows\Ne
 D:\A1_DEV\00_PERSO\v_shooter_path\src\v_shooter_path\obj\Debug\net6.0-windows\v_shooter_path.csproj.CopyComplete
 D:\A1_DEV\00_PERSO\v_shooter_path\src\v_shooter_path\obj\Debug\net6.0-windows\NewLvlWindow.g.cs
 D:\A1_DEV\00_PERSO\v_shooter_path\src\v_shooter_path\obj\Debug\net6.0-windows\NewLvlWindow.baml
+D:\A1_DEV\00_PERSO\v_shooter_path\src\v_shooter_path\obj\Debug\net6.0-windows\ExportLvlWindow.g.cs
+D:\A1_DEV\00_PERSO\v_shooter_path\src\v_shooter_path\obj\Debug\net6.0-windows\ExportLvlWindow.baml

@@ -7,7 +7,7 @@ using System.Windows.Media;
 
 namespace v_shooter_path
 {
-    internal class Entity
+    public class Entity
     {
         public char Letter { get; set; }
         public int CaseX { get; set; }

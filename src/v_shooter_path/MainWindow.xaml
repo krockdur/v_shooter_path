@@ -48,10 +48,9 @@
         
 
         <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0">
-            <TextBlock>World Grid X</TextBlock>
-            <TextBox Name="tb_world_grid_x" />
-            <TextBlock>World Grid Y</TextBlock>
-            <TextBox Name="tb_world_grid_y" />
+
+            <TextBlock FontSize="14">Select an object :</TextBlock>
+            
             <ComboBox Name="Cb_entities_selection" IsEditable="False" SelectionChanged="Cb_entities_selection_SelectionChanged">
 
                 <ComboBoxItem>
@@ -237,7 +236,25 @@
                 </ComboBoxItem>
 
             </ComboBox>
-            <Button Name="btn_update_grid" Click="btn_update_grid_Click">Update</Button>
+
+            <TextBlock/>
+            
+            <TextBlock FontSize="14">Level width</TextBlock>
+            <TextBlock FontSize="14" Name="TbInfoLvlWidth"></TextBlock>
+            <TextBlock/>
+            
+            <TextBlock FontSize="14">Level Height</TextBlock>
+            <TextBlock FontSize="14" Name="TbInfoLvlHeight"></TextBlock>
+            <TextBlock/>
+            
+            <TextBlock FontSize="14">Mouse position X</TextBlock>
+            <TextBlock FontSize="14" Name="TbInfoMousePositionX"></TextBlock>
+            <TextBlock/>
+            
+            <TextBlock FontSize="14">Mouse position Y</TextBlock>
+            <TextBlock FontSize="14" Name="TbInfoMousePositionY"></TextBlock>
+            <TextBlock/>
+            
         </StackPanel>
 
         <TabControl Grid.Row="1" Grid.Column="1">
